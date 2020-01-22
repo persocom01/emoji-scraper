@@ -35,7 +35,7 @@ pattern = f'[{"".join(emojis)}]'
 
 > I get UnicodeEncodeError: 'charmap' codec can't encode character...
 
-Python is not running on utf-8 encoding on your computer. Use the following code to fix the error:
+python is not running on utf-8 encoding on your computer. Use the following code to fix the error:
 
 ```
 import sys
