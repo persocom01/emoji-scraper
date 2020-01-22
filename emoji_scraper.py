@@ -11,7 +11,7 @@ export_path = r'.\emojis.json'
 # Copy and paste the webpage using
 # https://www.unicode.org/emoji/charts/full-emoji-list.html
 # ctrl+a ctrl+c ctrl+v into a text editor to get the string below.
-unicode_website = """
+emoji_webpage = """
 [Unicode]Emoji Charts
 
 Adopt a Character
@@ -2026,7 +2026,7 @@ Access to Copyright and terms of use
 Last updated:  - 12/14/2019, 4:22:41 AM - Contact Us
 """
 
-all_characters = set(unicode_website)
+all_characters = set(emoji_webpage)
 normal_characters = set(string.printable)
 emojis = all_characters - normal_characters
 
@@ -2040,6 +2040,3 @@ with open(export_path, 'w') as outfile:
 
 print('emoji list:')
 print(emojis)
-
-# To use emojis for regex, use:
-# emoji_pattern = '|'.join(emojis))
