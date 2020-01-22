@@ -8,9 +8,9 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 
 export_path = r'.\emojis.json'
 
-# Copy and paste the webpage using
+# Copy and paste the webpage:
 # https://www.unicode.org/emoji/charts/full-emoji-list.html
-# ctrl+a ctrl+c ctrl+v into a text editor to get the string below.
+# ctrl+a ctrl+c ctrl+v onto a text editor to get the string below.
 emoji_webpage = """
 [Unicode]Emoji Charts
 
