@@ -30,7 +30,7 @@ emojis.json is the result. It contains a list of emojis. You may just download t
 This code was written to in order to get a regex pattern that can match all emojis. To get such a pattern, use:
 
 ```
-pattern = f'[{"".join(emojis)}]'
+pattern = '|'.join(emojis)
 ```
 
 > I get UnicodeEncodeError: 'charmap' codec can't encode character...
@@ -56,7 +56,7 @@ This is the only version until I have free time and decide to add more features.
 
 ### Known issues
 
-1. This approach to extracting emojis results in the flags, which comprise two separate characters, being captured as two separate emojis.
+1. This approach to extracting emojis brute forces all possible combinations of "letter emojis" in order to capture flag emojis. However, it also means that non-existant letter combinations are added to the list.
 
 ## License
 

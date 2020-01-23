@@ -1,4 +1,5 @@
 import string
+import itertools
 import json
 import sys
 import io
@@ -2027,9 +2028,28 @@ Last updated:  - 12/14/2019, 4:22:41 AM - Contact Us
 """
 
 all_characters = set(emoji_webpage)
-normal_characters = set(string.printable)
-emojis = all_characters - normal_characters
 
+# Remove string characters and '—'.
+string_characters = set(string.printable)
+emojis = all_characters - string_characters
+emojis.remove('—')
+
+# Remove alphabert emojis.
+letter_emojis = ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰',
+                 '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿']
+emojis = emojis - set(letter_emojis)
+
+# Adds all 2 character combinations of a alphabert emojis to capture flags.
+flag_emojis = []
+length = 2
+for c in itertools.combinations(letter_emojis, length):
+    flag = ''.join(c)
+    flag_emojis.append(flag)
+
+# Add lists together.
+emojis = list(emojis) + flag_emojis
+
+# Export to file.
 with open(export_path, 'w') as outfile:
     json.dump(list(emojis), outfile)
 
@@ -2040,3 +2060,4 @@ with open(export_path, 'w') as outfile:
 
 print('emoji list:')
 print(emojis)
+print('total:', len(emojis))
