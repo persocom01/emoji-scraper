@@ -45,12 +45,18 @@ sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 ```
 
-## Current status
+## Current status and issues
+
+### Status
 
 This is the only version until I have free time and decide to add more features.
 
 1. Adding code that automatically scrapes the website instead of needing manual copy and paste.
 2. Making it runnable from command line.
+
+### Known issues
+
+1. This approach to extracting emojis results in the flags, which comprise two separate characters, being captured as two separate emojis.
 
 ## License
 
