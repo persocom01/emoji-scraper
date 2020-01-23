@@ -12,7 +12,7 @@ I do know that emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandre
 
 python has to be downloaded and installed. Atom was used as text editor.
 
-* [python 3.8.1 Windows x86-64](https://www.python.org/downloads/)
+* [python 3.8.1](https://www.python.org/downloads/)
 * [atom 1.40.1](https://atom.io/)
 
 ### Atom packages used:
