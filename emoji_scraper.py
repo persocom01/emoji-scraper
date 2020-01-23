@@ -2039,7 +2039,7 @@ letter_emojis = ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭',
                  '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿']
 emojis = emojis - set(letter_emojis)
 
-# Adds all two character combinations of letter emojis to capture flags.
+# Add all two character combinations of letter emojis to capture flags.
 flag_emojis = []
 length = 2
 for c in itertools.combinations(letter_emojis, length):
