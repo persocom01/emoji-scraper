@@ -2,7 +2,7 @@
 
 A simple piece of python code that extracts all unique emojis on a webpage and saves them into a json file. Meant to work on https://www.unicode.org/emoji/charts/full-emoji-list.html
 
-I do know that emoji.UNICODE_EMOJI from the emoji library exists, but I find that it captures #, numbers and various other characters I don't consider emojis, and was not suitable for my purposes. That was how this mini 'project' was born.
+I do know that emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandrevicenzi/emojis) library exists, but I find that it captures #, numbers and various other characters I don't consider emojis, and was not suitable for my purposes. That was how this mini 'project' was born.
 
 ## Requirements
 
