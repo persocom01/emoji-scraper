@@ -58,7 +58,7 @@ This is the only version until I have free time and decide to add more features.
 
 ### Known issues
 
-1. This approach to extracting emojis brute forces all possible combinations of "letter emojis" in order to capture flag emojis. However, it also means that non-existant letter combinations are added to the list.
+1. This approach to extracting emojis brute forces all possible two letter combinations of "letter emojis" in order to capture flag emojis. However, it also means that non-existant letter combinations are added to the list.
 
 ## License
 
