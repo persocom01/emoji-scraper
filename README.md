@@ -2,7 +2,9 @@
 
 A simple piece of python code that extracts all unique emojis on a webpage and saves them into a json file. Meant to work on https://www.unicode.org/emoji/charts/full-emoji-list.html
 
-I do know that emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandrevicenzi/emojis) library exists, but I find that it captures #, numbers and various other characters I don't consider emojis, and was not suitable for my purposes. That was how this mini 'project' was born.
+Flag emojis comprise two unique characters, so all letter emojis are removed from the list, and all possible two letter combinations of letter emojis are added to it to come up with a complete emoji list. Take note of this if attempting to use the code on a different webpage.
+
+Alternative ways of getting a list of all emojis include using emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandrevicenzi/emojis) library, but I found that it captures #, numbers and various other characters I don't consider emojis, and was not suitable for my purposes. That was how this mini 'project' was born.
 
 ## Requirements
 
@@ -58,7 +60,7 @@ This is the only version until I have free time and decide to add more features.
 
 ### Known issues
 
-1. This approach to extracting emojis brute forces all possible two letter combinations of "letter emojis" in order to capture flag emojis. However, it also means that non-existant letter combinations are added to the list.
+1. The approach to extracting emojis brute forces all possible two letter combinations of letter emojis in order to capture flag emojis. However, it also meant that non-existant letter combinations are added to the list.
 
 ## License
 
