@@ -2034,12 +2034,12 @@ string_characters = set(string.printable)
 emojis = all_characters - string_characters
 emojis.remove('—')
 
-# Remove alphabert emojis.
+# Remove letter emojis.
 letter_emojis = ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰',
                  '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿']
 emojis = emojis - set(letter_emojis)
 
-# Adds all 2 character combinations of a alphabert emojis to capture flags.
+# Adds all two character combinations of letter emojis to capture flags.
 flag_emojis = []
 length = 2
 for c in itertools.combinations(letter_emojis, length):
@@ -2052,11 +2052,6 @@ emojis = list(emojis) + flag_emojis
 # Export to file.
 with open(export_path, 'w') as outfile:
     json.dump(list(emojis), outfile)
-
-# Import code.
-# import_path = export_path
-# with open(import_path) as f:
-#     emojis = json.load(f)
 
 print('emoji list:')
 print(emojis)
