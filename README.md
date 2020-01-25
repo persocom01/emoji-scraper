@@ -10,7 +10,7 @@ Alternative ways of getting a list of emojis include using emoji.UNICODE_EMOJI f
 
 * Python 3
 
-This project was designed not to require any python libraries not included in the base python installation.
+This project was designed to only use python standard libraries.
 
 ## Installation
 
