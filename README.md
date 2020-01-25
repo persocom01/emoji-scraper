@@ -1,6 +1,6 @@
 # emoji_scraper
 
-A simple piece of python code that extracts unique emojis on a webpage and saves them into a json file. Meant to work on https://www.unicode.org/emoji/charts/full-emoji-list.html
+A simple piece of python code that extracts unique emojis on a webpage and saves them into a json file. Meant for use on https://www.unicode.org/emoji/charts/full-emoji-list.html to produce a list of emojis usable as a regex pattern.
 
 The code does not take into account skin tone variations of emojis. Flag emojis are accounted for by adding a list of all two letter permutations of letter emojis to the extracted emojis to get a complete emoji list. Take note if attempting to use the code on a different webpage.
 
@@ -33,9 +33,12 @@ emojis.json is the result. It contains a list of emojis. You may just download t
 
 > How do I use a list of emojis?
 
-This code was written to in order to get a regex pattern that can match all emojis. To get such a pattern, use:
+This code was written in order to get a regex pattern that can match all emojis. To get such a pattern, use:
 
 ```
+with open(r'.\emojis.json') as f:
+    emojis = json.load(f)
+
 pattern = '|'.join(emojis)
 ```
 
