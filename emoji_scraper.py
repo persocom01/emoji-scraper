@@ -2042,8 +2042,8 @@ emojis = emojis - set(letter_emojis)
 # Add all two character combinations of letter emojis to capture flags.
 flag_emojis = []
 length = 2
-for c in itertools.permutations(letter_emojis, length):
-    flag = ''.join(c)
+for p in itertools.permutations(letter_emojis, length):
+    flag = ''.join(p)
     flag_emojis.append(flag)
 
 # Add lists together.
