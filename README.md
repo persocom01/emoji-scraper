@@ -4,7 +4,7 @@ A simple piece of python code that extracts unique emojis on a webpage and saves
 
 The code does not take into account skin tone variations of emojis. Flag emojis are accounted for by adding a list of all two letter permutations of letter emojis to the extracted emojis to get a complete emoji list. Take note if attempting to use the code on a different webpage.
 
-Alternative ways of getting a list of emojis include using emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandrevicenzi/emojis) library, but it returned an error when I used it in regex, captured a number of characters I did not consider emojis, and was this not suitable for my purposes. That was how this mini 'project' was conceived.
+Alternative ways of getting a list of emojis include using emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandrevicenzi/emojis) library, but it returned an error when I used it in regex, captured a number of characters I did not consider emojis, and was thus not suitable for my purposes. That was how this mini 'project' was conceived.
 
 ## Requirements
 
@@ -44,7 +44,7 @@ pattern = '|'.join(emojis)
 
 > I get UnicodeEncodeError: 'charmap' codec can't encode character...
 
-python is not running on utf-8 encoding on your computer. Use the following code to fix the error:
+python is not running on utf-8 encoding on your computer. Append the following code to what you're running to fix the error:
 
 ```
 import sys
