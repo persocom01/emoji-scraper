@@ -2,7 +2,7 @@
 
 A simple piece of python code that extracts unique emojis on a webpage and saves them into a json file. Meant for use on https://www.unicode.org/emoji/charts/full-emoji-list.html to produce a list of emojis usable as a regex pattern.
 
-The code does not take into account skin tone variations of emojis. Flag emojis are accounted for by adding a list of all two letter permutations of letter emojis to the extracted emojis to get a complete emoji list. Take note if attempting to use the code on a different webpage.
+Flag emojis are accounted for by adding a list of all two letter permutations of letter emojis to the extracted emojis to get a complete emoji list. Take note if attempting to use the code on a different webpage.
 
 Alternative ways of getting a list of emojis include using emoji.UNICODE_EMOJI from the [emoji](https://github.com/alexandrevicenzi/emojis) library, but it returned an error when I used it in regex, captured a number of characters I did not consider emojis, and was thus not suitable for my purposes. That was how this mini 'project' was conceived.
 
@@ -71,6 +71,7 @@ This is the only version until I have free time and decide to add more features:
 ### Known issues
 
 1. The approach to accounting for flag emojis results in non-existant letter permutations being added to the emoji list.
+2. Does not account for skin tone variations of emojis.
 
 ## License
 
