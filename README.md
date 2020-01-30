@@ -27,7 +27,7 @@ python has to be downloaded and installed. Atom was used as text editor.
 
 Run emoji_scraper.py using the script module in atom. You need to paste the webpage into the "emoji_webpage" variable in the file before running it.
 
-emojis.json is the result. It contains a list of emojis. You may just download the file if you are not concerned in any new emoji updates.
+emojis.json is the result. It contains a list of emojis. You may just download the file if you are not concerned with new emoji updates.
 
 ### FAQ
 
@@ -62,10 +62,11 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 
 ### Status
 
-This is the only version until I have free time and decide to add more features.
+This is the only version until I have free time and decide to add more features:
 
 1. Adding code that automatically scrapes the website instead of needing manual copy and paste.
 2. Making it runnable from command line.
+3. Creating an emoji dictionary.
 
 ### Known issues
 
