@@ -2047,9 +2047,7 @@ for p in itertools.permutations(letter_emojis, length):
     flag_emojis.append(flag)
 
 # Add lists together.
-print(len(emojis), len(flag_emojis))
 emojis = list(emojis) + flag_emojis
-print(len(emojis))
 
 # Export to file.
 with open(export_path, 'w') as outfile:
