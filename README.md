@@ -1,4 +1,4 @@
-# emoji_scraper
+# emoji-scraper
 
 A simple piece of python code that extracts unique emojis on a webpage and saves them into a json file. Meant for use on https://www.unicode.org/emoji/charts/full-emoji-list.html to produce a list of emojis usable as a regex pattern.
 
