@@ -14,18 +14,13 @@ This project was designed to only use python standard libraries.
 
 ## Installation
 
-python has to be downloaded and installed. Atom was used as text editor.
+python has to be downloaded and installed.
 
-* [python 3.8.1](https://www.python.org/downloads/)
-* [atom 1.40.1](https://atom.io/)
-
-### Atom packages used:
-
-* script
+* [python 3.8.2](https://www.python.org/downloads/)
 
 ## Usage
 
-Run emoji_scraper.py using the script module in atom. You need to paste the webpage into the "emoji_webpage" variable in the file before running it.
+Edit emoji_scraper.py using any text editor. Paste the webpage into the "emoji_webpage" variable in the file before running it from command line or any IDE.
 
 emojis.json is the result. It contains a list of emojis. You may just download the file if you are not concerned with new emoji updates.
 
@@ -65,8 +60,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 This is the only version until I have free time and decide to add more features:
 
 1. Adding code that automatically scrapes the website instead of needing manual copy and paste.
-2. Making it runnable from command line.
-3. Creating an emoji dictionary.
+2. Creating an emoji dictionary.
 
 ### Known issues
 
