@@ -2099,15 +2099,15 @@ Last updated:  - 1/30/2020, 4:05:59 AM - Contact Us
 
 all_characters = set(emoji_webpage)
 
-# Remove string characters and '—'.
+# Remove string characters and other characters not considered emojis.
 string_characters = set(string.printable)
-emojis = all_characters - string_characters
-emojis.remove('—')
+other_characters = set(['—', '’', '“', '”'])
+emojis = all_characters - string_characters - other_characters
 
 # Remove letter emojis.
-letter_emojis = ['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰',
-                 '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿']
-emojis = emojis - set(letter_emojis)
+letter_emojis = set(['🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱',
+                     '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿'])
+emojis = emojis - letter_emojis
 
 # Add all two character combinations of letter emojis to capture flags.
 flag_emojis = []
